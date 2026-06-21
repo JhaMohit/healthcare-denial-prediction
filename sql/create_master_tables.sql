@@ -27,3 +27,18 @@ CREATE TABLE patients (
     state VARCHAR(50) NOT NULL,
     insurance_member_id VARCHAR(50) NOT NULL UNIQUE
 );
+CREATE TABLE diagnosis_codes (
+    diagnosis_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    diagnosis_code VARCHAR(20) NOT NULL UNIQUE,
+    diagnosis_description VARCHAR(255) NOT NULL
+);
+CREATE TABLE procedure_codes (
+    procedure_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    procedure_code VARCHAR(20) NOT NULL UNIQUE,
+    procedure_description VARCHAR(255) NOT NULL
+);
+CREATE TABLE denial_reason_codes (
+    denial_reason_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    denial_reason_code VARCHAR(20) NOT NULL UNIQUE,
+    denial_reason_description VARCHAR(255) NOT NULL
+);
