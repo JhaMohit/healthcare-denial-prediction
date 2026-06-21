@@ -20,3 +20,10 @@ CREATE TABLE payers (
     payer_name VARCHAR(100) NOT NULL UNIQUE,
     payer_type VARCHAR(50) NOT NULL
 );
+CREATE TABLE patients (
+    patient_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    age INTEGER NOT NULL CHECK (age >= 0),
+    gender VARCHAR(20) NOT NULL,
+    state VARCHAR(50) NOT NULL,
+    insurance_member_id VARCHAR(50) NOT NULL UNIQUE
+);
