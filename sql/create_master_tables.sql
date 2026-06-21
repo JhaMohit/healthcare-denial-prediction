@@ -15,3 +15,8 @@ CREATE TABLE providers (
         FOREIGN KEY (department_id)
         REFERENCES departments(department_id)
 );
+CREATE TABLE payers (
+    payer_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    payer_name VARCHAR(100) NOT NULL UNIQUE,
+    payer_type VARCHAR(50) NOT NULL
+);
