@@ -1,0 +1,4 @@
+CREATE TABLE departments (
+    department_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    department_name VARCHAR(100) NOT NULL UNIQUE
+);
