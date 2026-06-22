@@ -37,3 +37,18 @@ CREATE TABLE claim_lines (
     FOREIGN KEY (procedure_id)
         REFERENCES procedure_codes(procedure_id)
 );
+CREATE TABLE claim_diagnoses (
+    claim_diagnosis_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+
+    claim_id INTEGER NOT NULL,
+    diagnosis_id INTEGER NOT NULL,
+
+    CONSTRAINT uq_claim_diagnosis
+        UNIQUE (claim_id, diagnosis_id),
+
+    FOREIGN KEY (claim_id)
+        REFERENCES claims(claim_id),
+
+    FOREIGN KEY (diagnosis_id)
+        REFERENCES diagnosis_codes(diagnosis_id)
+);
