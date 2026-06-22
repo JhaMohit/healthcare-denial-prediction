@@ -18,3 +18,22 @@ CREATE TABLE claims (
     FOREIGN KEY (provider_id) REFERENCES providers(provider_id),
     FOREIGN KEY (payer_id) REFERENCES payers(payer_id)
 );
+CREATE TABLE claim_lines (
+    claim_line_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+
+    claim_id INTEGER NOT NULL,
+    procedure_id INTEGER NOT NULL,
+
+    line_number INTEGER NOT NULL,
+
+    charge_amount NUMERIC(12,2) NOT NULL CHECK (charge_amount >= 0),
+
+    CONSTRAINT uq_claim_line_number
+        UNIQUE (claim_id, line_number),
+
+    FOREIGN KEY (claim_id)
+        REFERENCES claims(claim_id),
+
+    FOREIGN KEY (procedure_id)
+        REFERENCES procedure_codes(procedure_id)
+);
