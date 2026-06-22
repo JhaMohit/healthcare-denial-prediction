@@ -52,3 +52,18 @@ CREATE TABLE claim_diagnoses (
     FOREIGN KEY (diagnosis_id)
         REFERENCES diagnosis_codes(diagnosis_id)
 );
+CREATE TABLE claim_status_history (
+    status_history_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+
+    claim_id INTEGER NOT NULL,
+
+    status VARCHAR(50) NOT NULL,
+
+    status_date TIMESTAMP NOT NULL,
+
+    CONSTRAINT uq_claim_status_event
+        UNIQUE (claim_id, status, status_date),
+
+    FOREIGN KEY (claim_id)
+        REFERENCES claims(claim_id)
+);
