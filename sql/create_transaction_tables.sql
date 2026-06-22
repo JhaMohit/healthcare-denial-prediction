@@ -67,3 +67,29 @@ CREATE TABLE claim_status_history (
     FOREIGN KEY (claim_id)
         REFERENCES claims(claim_id)
 );
+CREATE TABLE denials (
+
+    denial_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+
+    claim_id INTEGER NOT NULL,
+    claim_line_id INTEGER,
+
+    denial_reason_id INTEGER NOT NULL,
+
+    denial_date DATE NOT NULL,
+
+    denied_amount NUMERIC(12,2) NOT NULL
+        CHECK (denied_amount >= 0),
+
+    appeal_flag BOOLEAN DEFAULT FALSE,
+
+    FOREIGN KEY (claim_id)
+        REFERENCES claims(claim_id),
+
+    FOREIGN KEY (claim_line_id)
+        REFERENCES claim_lines(claim_line_id),
+
+    FOREIGN KEY (denial_reason_id)
+        REFERENCES denial_reason_codes(denial_reason_id)
+
+);
