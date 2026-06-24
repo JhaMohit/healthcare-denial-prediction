@@ -1,0 +1,16 @@
+denial_reason_code,denial_reason_description
+CO-16,Claim or Service Lacks Required Information
+CO-18,Duplicate Claim or Service
+CO-22,Coordination of Benefits Information Missing
+CO-29,Time Limit for Filing Expired
+CO-45,Charge Exceeds Fee Schedule Maximum
+CO-50,Service Not Medically Necessary
+CO-96,Non Covered Charge
+CO-97,Service Included in Another Service
+CO-109,Claim Not Covered by This Payer
+CO-119,Benefit Maximum Reached
+CO-151,Payment Adjusted Due to Payer Policy
+PR-1,Deductible Amount
+PR-2,Coinsurance Amount
+PR-3,Copayment Amount
+PR-204,Service Not Covered Under Current Benefit Plan

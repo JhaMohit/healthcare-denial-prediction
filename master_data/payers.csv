@@ -1,0 +1,16 @@
+payer_name,payer_type
+UnitedHealthcare,Commercial
+Aetna,Commercial
+Cigna,Commercial
+Blue Cross Blue Shield,Commercial
+Humana,Commercial
+Kaiser Permanente,Commercial
+Molina Healthcare,Commercial
+Centene,Commercial
+Anthem,Commercial
+Health Care Service Corporation,Commercial
+Medicare,Government
+Medicaid,Government
+TRICARE,Government
+Veterans Health Administration,Government
+CHAMPVA,Government

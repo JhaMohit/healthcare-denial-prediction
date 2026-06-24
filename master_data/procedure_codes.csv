@@ -1,0 +1,21 @@
+procedure_code,procedure_description
+99213,Office or Outpatient Visit Established Patient
+99214,Office or Outpatient Visit Moderate Complexity
+99215,Office or Outpatient Visit High Complexity
+93000,Electrocardiogram Complete
+71046,Chest X-Ray Two Views
+80053,Comprehensive Metabolic Panel
+80061,Lipid Panel
+85025,Complete Blood Count Automated
+83036,Hemoglobin A1C Test
+70450,CT Scan Head Without Contrast
+72148,MRI Lumbar Spine Without Contrast
+74177,CT Abdomen and Pelvis With Contrast
+36415,Venipuncture Blood Collection
+20610,Major Joint Injection
+29881,Knee Arthroscopy With Meniscectomy
+45378,Diagnostic Colonoscopy
+43239,Upper GI Endoscopy With Biopsy
+12001,Simple Wound Repair
+90471,Immunization Administration
+90686,Influenza Vaccine
