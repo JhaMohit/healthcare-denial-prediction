@@ -1,0 +1,2 @@
+ALTER TABLE claim_diagnoses
+ADD COLUMN is_primary BOOLEAN NOT NULL DEFAULT FALSE;
