@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load dataset
-df = pd.read_csv("ml/data/ml_claim_dataset.csv")
+from data_loader import load_data
+df = load_data()
 
 # Dataset shape
 print(df.shape)
