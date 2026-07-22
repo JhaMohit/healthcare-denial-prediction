@@ -18,6 +18,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
 from sklearn.model_selection import train_test_split
 from data_loader import load_data
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 def preprocess_data():
     """
@@ -89,6 +91,15 @@ def preprocess_data():
         "submission_day_of_week"
     ]
 
+    numeric_pipeline = Pipeline(
+    steps=[
+        (
+            "scaler",
+            StandardScaler()
+        )
+    ]
+)
+
     preprocessor = ColumnTransformer(
         transformers=[
             (
@@ -114,7 +125,7 @@ def preprocess_data():
 
             (
                 "numeric",
-                "passthrough",
+                numeric_pipeline,
                 numeric_features
             )
         ]
