@@ -1,5 +1,5 @@
 """
-03_train_logistic_regression.py
+train_logistic_regression.py
 Author: Mohit Jha
 Project:
     Healthcare Claim Denial Prediction
